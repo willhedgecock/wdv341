@@ -54,6 +54,8 @@
 
     <p>Hello, my name is <?php echo $myName ?></p>
 
+    <p>This is me making a change to this testGit file</p>
+
 </body>
 
 </html>
