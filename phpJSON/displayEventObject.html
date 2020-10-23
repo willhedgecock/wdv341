@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display PHP/JSON Obj</title>
+
+    <style>
+        p {
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        span {
+            font-weight: normal;
+            font-size: 1rem;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Using AJAX to grab JSON object converted from PHP</h1>
+    <h2>Display the JSON/PHP object on the client</h2>
+
+    <h3>Display the different properties from the object</h3>
+
+    <button id="displayObjProperties">Display Object Properties</button>
+
+
+
+    <p>
+        Event Name: <span id="eventName"></span>
+    </p>
+
+    <p>
+        Event Description: <span id="eventDescription"></span>
+    </p>
+
+    <p>
+        Event Presenter: <span id="eventPresenter"></span>
+    </p>
+
+    <p>
+        Event Date: <span id="eventDate"></span>
+    </p>
+
+    <p>
+        Event Time: <span id="eventTime"></span>
+    </p>
+
+    <script>
+
+        document.querySelector("#displayObjProperties").addEventListener("click", function() {
+
+        let requestObj = new XMLHttpRequest();
+
+        requestObj.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+
+                let newRequestObj = JSON.parse(this.responseText);
+                console.log(newRequestObj);
+
+                document.querySelector("#eventName").innerHTML = newRequestObj.eventName;
+                document.querySelector("#eventDescription").innerHTML = newRequestObj.eventDescription;
+                document.querySelector("#eventPresenter").innerHTML = newRequestObj.eventPresenter;
+                document.querySelector("#eventDate").innerHTML = newRequestObj.eventDate;
+                document.querySelector("#eventTime").innerHTML = newRequestObj.eventTime;
+            }
+        };
+
+        requestObj.open("GET", "deliverEventObject.php", true);
+        requestObj.send();
+
+    });
+
+    </script>
+
+</body>
+
+</html>
