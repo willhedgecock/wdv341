@@ -57,6 +57,10 @@
          $event_time = $_POST['event_time'];
      }
 
+     if( $_POST['event_location'] != "1") {
+        die("Form could not be submitted");
+        }
+
      if($validForm) {
 
         try {
@@ -140,12 +144,8 @@
         .errorMsg {
             color: red;
         }
-
-
-
     </style>
 
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -169,10 +169,14 @@
 
         <p>
             <label for="event_description">Event Description: </label>
-            <input type="text" id="event-description" name="event_description" value="<?php echo $event_description?>"><span class="errorMsg"><?php echo $event_description_err?></span>
+            <input type="text" id="event_description" name="event_description" value="<?php echo $event_description?>"><span class="errorMsg"><?php echo $event_description_err?></span>
         </p>
 
         <p>
+            <label style="display: none;" for="event_location">Event Location: </label>
+            <input type="text" id="event_location" name="event_location" style="display: none" autocomplete="off" value="1">
+        <p>
+
             <label for="event-presenter">Event Presenter: </label>
             <input type="text" id="event_presenter" name="event_presenter" value="<?php echo $event_presenter?>"><span class="errorMsg"><?php echo $event_presenter_err?></span>
         </p>
@@ -185,10 +189,7 @@
         <p>
             <label for="event_time">Event Time: </label>
             <input type="time" id="event_time" name="event_time" value="<?php echo $event_time?>"><span class="errorMsg"><?php echo $event_time_err?></span> 
-        </p>
-
-        <div class="g-recaptcha" data-sitekey="6LdzKuIZAAAAAFWMxTyrdy8ZZ8tubUHFHU0GPJ12"></div>
-        <br>        
+        </p>       
 
         <input type="submit" value="Submit Event" name="event_submit" id="event_submit">
         <input type="reset" value="Reset Form" name="Reset">
