@@ -1,0 +1,85 @@
+.form-container {
+  max-width: 95%;
+  margin: 30px auto;
+}
+
+.form-container h1 {
+  font-family: 'Nerko One', cursive, Arial, Helvetica, sans-serif;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.form-container h2, .form-container h3 {
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-container form {
+  background-color: #eeeeee;
+  border: 2px solid darkgray;
+  padding: 15px;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type=text], input[type=password] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #727272;
+  margin-top: 6px;
+  margin-bottom: 15px;
+  resize: none;
+}
+
+input:focus {
+  box-shadow: 0px 0px 6px 2px #6cccfc;
+}
+
+textarea:focus {
+  box-shadow: 0px 0px 6px 2px #6cccfc;
+}
+
+button {
+  background-color: #6cccfc;
+  color: black;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Sigmar One", Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  color: white;
+}
+
+.errMsg {
+  color: red;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.displayMessage {
+  text-align: center;
+  margin: 15px auto 15px auto;
+}
+
+.adminFunctions {
+  width: 50%;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  background-color: #eeeeee;
+  border: 2px solid darkgray;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.adminFunctions p {
+  margin: 15px;
+}
+
+.flex-footer {
+  top: 100px;
+}

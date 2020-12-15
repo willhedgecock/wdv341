@@ -1,0 +1,82 @@
+$main-blue: rgba(108,204,252,1);
+
+.msgClassFail {
+    padding: 15px;
+    background-color: #EC2323;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.msgClassPass {
+    padding: 15px;
+    background-color: limegreen;
+    width: 75%;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact-container {
+    max-width: 95%;
+    margin: 30px auto;
+
+    h1 {
+        font-family: 'Nerko One', cursive, Arial, Helvetica, sans-serif;
+        font-size: 2.5em;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    h2, h3 {
+        margin-bottom: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #contact-form {
+        background-color:#eeeeee;
+        border: 2px solid darkgray;
+        padding: 15px;
+        border-radius: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+input[type=text], input[type=email], textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(114, 114, 114);
+    margin-top: 6px;
+    margin-bottom: 15px;
+    resize: none;
+}
+
+input:focus {
+    box-shadow: 0px 0px 6px 2px $main-blue;
+}
+
+textarea:focus {
+    box-shadow: 0px 0px 6px 2px $main-blue;
+}
+
+.required {
+    color: red;
+}
+
+button {
+    background-color: $main-blue;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Sigmar One", Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    color: white;
+}

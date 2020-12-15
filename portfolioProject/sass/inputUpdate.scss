@@ -1,0 +1,226 @@
+$main-blue: rgba(108,204,252,1);
+
+.heading h1 {
+    max-width: 95%;
+    margin: 10px auto;
+    font-family: 'Nerko One', cursive, Arial, Helvetica, sans-serif;
+}
+
+.updateHeader {
+    width: 95%;
+    margin: auto;
+    font-family: 'Nerko One', cursive, Arial, Helvetica, sans-serif;
+    margin: 10px auto; 
+}
+
+.inputEvent {
+    background-color:#eeeeee;
+        border: 2px solid darkgray;
+        padding: 15px;
+        border-radius: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+}
+
+.inputContainer {
+    max-width: 50%;
+    margin: 30px auto;
+}
+
+.inputField {
+    margin-top: 20px;
+}
+
+input[type=text], input[type=number] {
+    width: 100%;
+    height: 2em;
+}
+
+textarea {
+    width: 100%;
+    resize: vertical;
+}
+
+#submit, #reset {
+    background-color: $main-blue;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Sigmar One", Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+#submit:hover, #reset:hover {
+    color: white;
+}
+
+header h1 {
+    font-family: 'Nerko One', cursive, Arial, Helvetica, sans-serif;
+}
+
+button {
+    background-color: $main-blue;
+    color: black;
+    width: 100%;
+    padding: 5px 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Sigmar One", Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+
+.display-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.displayBlock {
+    max-width: 250px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid lightgray;
+    background-color: #f7f7f7; 
+}
+
+.displayBlock img {
+    width: 100%;
+    height: 220px;
+}
+
+.productName {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-family: 'Nerko One', cursive;
+    letter-spacing: 2px;
+    }
+
+.productDesc {
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    font-size: 0.9em;
+}
+
+.flex-footer {
+    top: 80px;
+}
+
+
+
+
+@media screen and (max-width: 480px) {
+
+    .displayBlock {
+        min-width: 100%;
+        margin: auto;
+        margin-bottom: 5px;
+    }
+
+
+
+    .inputContainer {
+        min-width: 100%;
+    }
+
+    .about-header {
+        border-radius: 0;
+        min-width: 100%;
+        margin: auto;
+    }
+
+    .active {
+        border-bottom: 1px solid black;
+    }
+
+    .brass-header {
+        text-align: center;
+    }
+
+    .flex-footer div  {
+        min-width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+        
+        p {
+            font-size: 1em;
+        }
+    }
+
+    iframe {
+        max-width: 90%;
+    }
+
+    .navbar a {
+        margin-right: 0;
+    }
+}
+
+
+
+button:hover {
+    color: white;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    .displayBlock {
+        min-width: 45%;
+        margin-bottom: 5px;
+    }
+
+
+    .inputContainer {
+        min-width: 95%;
+    }
+
+    .about-header {
+        border-radius: 0;
+        min-width: 100%;
+        margin: auto;
+    }
+
+    .flex-footer div  {
+        min-width: 40%;
+        text-align: center;
+        margin-bottom: 20px;
+        
+        p {
+            font-size: 1.2em;
+        }
+    }
+
+    iframe {
+        max-width: 95%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .inputContainer {
+        min-width: 95%;
+        margin: auto;
+    }
+
+    .about-header {
+        min-width: 95%;
+        margin:  10px auto;
+    }
+
+    .flex-footer div  {
+        min-width: 40%;
+        text-align: center;
+        margin-bottom: 20px;
+        
+        p {
+            font-size: 1.3em;
+        }
+    }
+
+    iframe {
+        max-width: 95%;
+    }
+}
