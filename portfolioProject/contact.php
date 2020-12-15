@@ -27,16 +27,16 @@
                                       <h3>Email Address<h3><p>' .$email. '</p>
                                       <h3>Message</h3><p>'.$message.'</p>';
                             
-
-                        $emailHeaders = "MIME-Version: 1.0" . "\r\n";
+                        $emailHeaders = "From: contact@willyhedge.com \r\n";
+                        $emailHeaders .= "MIME-Version: 1.0 \r\n";
                         $emailHeaders .= "Content=Type: text/html; charset=UTF-8" . "\r\n";
 
-                        $emailHeaders .= "From: " .$firstName . $lastName . "<" .$email. ">". "\r\n";
+                        
 
                         
                         //if (mail($toEmail, $subject, $emailBody, $emailHeaders)) {
 
-                        if (mail($toEmail, $subject, $emailBody)) {
+                        if (mail($toEmail, $subject, $emailBody, $emailHeaders)) {
                             $msg = "Your email has been sent, expect a reply within 24 hours. Thanks!";
                             $msgClass = "msgClassPass";
                         } else {
